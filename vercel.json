@@ -1,0 +1,12 @@
+{
+  "buildCommand": "",
+  "installCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
+  "redirects": [
+    { "source": "/platform", "destination": "/manthan.html", "permanent": true },
+    { "source": "/platform.html", "destination": "/manthan.html", "permanent": true },
+    { "source": "/demo", "destination": "/get-in-touch.html", "permanent": true },
+    { "source": "/demo.html", "destination": "/get-in-touch.html", "permanent": true }
+  ]
+}
