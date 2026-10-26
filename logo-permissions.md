@@ -1,0 +1,27 @@
+# Partner logo files and permissions log
+
+AJ confirmed, 6 Oct 2026: AJ holds logo permissions for all current and planned partners.
+
+All files saved exactly as served (no editing, recolouring or conversion) from the partner's own website, via plain GET. Fetched 6 Oct 2026.
+
+| Partner | Slug | File | Source URL | Date fetched | Type / size | Notes (white-background readability first) |
+|---|---|---|---|---|---|---|
+| BSE StAR MF (BSE Ltd) | bse-star-mf | assets/partners/bse-star-mf.png | https://www.bseindia.com/assets/includenew/images/bselogo.png | 6 Oct 2026 | PNG, 13.6 KB | Readable on white. Colour BSE logo with tagline, 180x111 px, transparent. Is the BSE Ltd logo, not a StAR MF-specific mark. |
+| NSE (National Stock Exchange of India) | nse | assets/partners/nse.svg | https://www.nseindia.com/assets/images/NSE_Logo.svg | 6 Oct 2026 | SVG, 3.2 KB | Should be readable on white (purple/orange/yellow/red, viewBox 0 0 127.039 43.1); contains a white fill element, so check visually once placed. Homepage returned 403, but this asset was served on direct GET. |
+| MF Utilities (MFUI) | mfu | assets/partners/mfu.png | https://www.mfuonline.com/login-assets/logo2x.png | 6 Oct 2026 | PNG, 8.0 KB | Readable on white. MFU emblem only (no MFUI wordmark), colour, 160x189 px. The header SVG wordmark is 252 KB, over the 150 KB limit, so skipped. |
+| CAMS | cams | none | https://www.camsonline.com/ | 6 Oct 2026 | n/a | No official file found. The logo path referenced by the site (/assets/image/cams-logo.svg) returns the HTML page, not an image. |
+| KFintech | kfintech | none | https://www.kfintech.com/ | 6 Oct 2026 | n/a | No official file found. The site returns "Request Rejected" to plain GET requests (bot protection), so no page or logo was reachable. |
+| Zoop (CKYC via Zoop) | zoop | assets/partners/zoop.svg | https://www.zoop.one/zooplogo.svg | 6 Oct 2026 | SVG, 3.8 KB | Readable on white: it is a black rounded tile with green wordmark built into the file (viewBox 0 0 478 328), so it appears as a black box on white. |
+| Digio | digio | assets/partners/digio.svg | https://www.digio.in/images/digio-new-logo/logo.svg | 6 Oct 2026 | SVG, 2.6 KB | Readable on white. Square app-icon style mark (white symbol on blue #005BC1 rounded tile, viewBox 0 0 512 512), not a wordmark. |
+| Signzy | signzy | assets/partners/signzy.svg | https://www.signzy.com/_next/static/media/Logo.0740c233.svg | 6 Oct 2026 | SVG, 3.6 KB | Readable on white. Dark grey/black (#231F20) wordmark, transparent, viewBox 0 0 122 52. |
+| OTPless | otpless | assets/partners/otpless.svg | https://otpless.com/assets/otpless-logo.svg | 6 Oct 2026 | SVG, 7.2 KB | Readable on white. Black wordmark, transparent, viewBox 0 0 134 30. |
+| AiSensy | aisensy | assets/partners/aisensy.png | https://umsousercontent.com/lib_EyxlwrMuBuWXHRhZ/o23jhxuys457hg29.png | 6 Oct 2026 | PNG, 84.2 KB | Readable on white. Green and charcoal colour logo, 2000x746 px with white padding. Hosted on the site's image CDN (the header logo image). Large for display, can be scaled down by CSS. |
+| Appreciate | appreciate | assets/partners/appreciate.webp | https://appreciatewealth.com/opt-assets/images/navlogo-img.webp | 6 Oct 2026 | WebP, 2.8 KB | Readable on white. Teal/navy colour logo, 166x36 px. Source is appreciatewealth.com (appreciate.in resolves to an unrelated under-construction page). |
+| CMOTS | cmots | assets/partners/cmots.png | https://www.cmots.com/logo192.png | 6 Oct 2026 | PNG, 11.0 KB | Readable on white. Red CMOTS Infotech logo with "ISO 9001:2015" text, 192x192 px, white background. This is the site's app icon; no other logo file was found in the page HTML. |
+| CAS Parser | cas-parser | assets/partners/cas-parser.png | https://casparser.in/images/logos/casparser-logo.png | 6 Oct 2026 | PNG, 6.1 KB | Readable on white. Blue icon and wordmark, 600x120 px. |
+| Volt Money | volt-money | assets/partners/volt-money.svg | https://voltmoney.in/images/VoltIcon.svg | 6 Oct 2026 | SVG, 1.6 KB | NOT readable on white: all shapes are white fill, so it needs a dark/coloured tile. Footer logo (icon plus wordmark), viewBox 0 0 83 31. |
+| Blostem | blostem | none | https://blostem.com/logos/blostem-logo-white.svg and /logos/blostem-logo-dark.svg | 6 Oct 2026 | n/a | No usable file: header logo SVG is 192 KB (white version) and the dark version is 429 KB, both over the 150 KB limit. Both were deleted. |
+| Nuvama | nuvama | assets/partners/nuvama.svg | https://www.nuvama.com/wp-content/uploads/2022/11/Nuvama-Logo.svg | 6 Oct 2026 | SVG, 4.3 KB | Readable on white. Navy (#03002F) with red accent, transparent, viewBox 0 0 175 30. |
+| IndiaBonds | indiabonds | assets/partners/indiabonds.png | https://assets.indiabonds.com/react/learn-module/ib-white-logo.png | 6 Oct 2026 | PNG, 11.0 KB | NOT readable on white: white text on transparent, needs a dark tile. 232x64 px, red/teal icon with tagline. Only logo file found on the site. |
+| The Wealth Company | the-wealth-company | none | https://www.thewealthcompany.in/ | 6 Oct 2026 | n/a | No official file found. The domain shows a registrar parking page; thewealthcompany.com redirects to an unrelated site (Cloudflare 403). |
+| Exotel | exotel | assets/partners/exotel.png | https://exotel.com/assets/images/exotel-logo.png | 6 Oct 2026 | PNG, 2.2 KB | Readable on white. Black "exotel" wordmark, transparent, 120x36 px (small, will look soft if upscaled). |
