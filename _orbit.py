@@ -18,28 +18,28 @@ AA, FEED, CAS, MAN, EXCH, PART = "Account Aggregator", "Registrar feed", "CAS", 
 # key, name, status (live = transact today / track = track today / soon = coming with partners), ring, angle, status text, intro, items [(name, sources, note)]
 GROUPS = [
  ("mkt", "Market-linked", "live", 1, 270, "Transact mutual funds · track the rest",
-  "Unified tracking across equities, mutual funds, ETFs, bonds, and market securities.",
+  "Equities, mutual funds, ETFs, bonds and other market securities, tracked together.",
   [("Mutual funds", [FEED, CAS, EXCH], "Transact today"), ("Equities and shares", [CAS, AA], "Track today"), ("ETFs", [CAS, AA], "Track today"),
    ("REITs and InvITs", [CAS, AA], "Track today"), ("Bonds and debentures", [CAS, MAN], "Track today · transact with partners"),
    ("Government securities", [AA, MAN], "Track today"), ("Sovereign gold bonds", [CAS, AA], "Track today")]),
- ("dep", "Deposits & Cash", "track", 1, 0, "Track today",
-  "Monitor savings, current accounts, and fixed deposits across banking partners.",
+ ("dep", "Deposits and cash", "track", 1, 0, "Track today",
+  "Savings, current accounts and fixed deposits across banks.",
   [("Fixed deposits", [AA, MAN], "Track today · transact with partners"), ("Recurring deposits", [AA, MAN], "Track today"), ("Savings and current accounts", [AA, MAN], "Track today")]),
  ("ret", "Retirement", "track", 1, 90, "Track today",
-  "Complete visibility across long-term provident funds, pensions, and retirement accounts.",
+  "Provident funds, pensions and retirement accounts, in full view.",
   [("EPF", [AA, MAN], "Track today"), ("PPF", [AA, MAN], "Track today"), ("NPS", [AA, MAN], "Track today")]),
  ("ins", "Insurance", "track", 1, 180, "Track today",
-  "Consolidate life, health, and general policies to ensure complete risk protection.",
+  "Life, health and general policies in one place, so gaps in cover are easy to spot.",
   [("Term life", [AA, MAN], "Track today"), ("Health", [AA, MAN], "Track today"), ("ULIPs", [AA, MAN], "Track today"),
    ("Endowment and traditional plans", [AA, MAN], "Track today"), ("General insurance", [MAN], "Track today")]),
  ("alt", "Alternatives", "track", 2, 315, "Track today",
-  "Incorporate PMS, AIFs, unlisted equity, and private assets into asset allocation.",
+  "PMS, AIFs, unlisted equity and private assets, included in asset allocation.",
   [("PMS", [MAN, PART], "Track today"), ("AIFs", [MAN, PART], "Track today"), ("Unlisted shares and ESOPs", [MAN], "Track today")]),
  ("phy", "Physical assets", "track", 2, 135, "Track today",
-  "Track real estate, precious metals, and tangible assets alongside liquid portfolios.",
+  "Real estate, precious metals and other tangible assets, alongside liquid portfolios.",
   [("Real estate", [MAN], "Track today"), ("Gold and jewellery", [MAN], "Track today"), ("Vehicles", [MAN], "Track today")]),
  ("lia", "Liabilities", "soon", 2, 225, "Track today · loans against funds coming",
-  "Tracking of mortgages, loans, and credit lines for net worth accuracy.",
+  "Home loans, loans and credit lines, so net worth is accurate.",
   [("Home, car and personal loans", [AA, MAN], "Track today"), ("Loan against mutual funds", [PART], "Coming with partners"), ("Credit cards", [AA, MAN], "Track today")]),
 ]
 
@@ -61,7 +61,7 @@ def orbit_section(headline):
     details = "".join(detail(p, i) for i, p in enumerate(GROUPS))
     return f'''  <section class="section assets-sec" id="assets"><div class="wrap">
     <div class="assets-head reveal"><h2 class="mfsh">{headline}</h2>
-      <p class="nw-frame">Investments are only one piece of the story. Manthan brings together everything a family owns, owes, and protects into a single, unified view.</p></div>
+      <p class="nw-frame">Investments are only one part of the story. Manthan brings together everything a family owns, owes and protects in one view.</p></div>
     <div class="solar-wrap">
       <div class="solar" data-solar>
         <div class="orbit o1" aria-hidden="true"></div><div class="orbit o2" aria-hidden="true"></div>
@@ -72,7 +72,7 @@ def orbit_section(headline):
       <div class="solar-side">
         <div class="od-box" aria-live="polite">{details}</div>
         <div class="key"><span><i class="k-live"></i>Transact today</span><span><i class="k-track"></i>Track today</span><span><i class="k-soon"></i>Coming with partners</span></div>
-        <p class="small muted"><b>Data sources:</b> Account Aggregator, registrar feeds, CAS uploads, or direct entry.</p>
+        <p class="small muted">Data sources: Account Aggregator, registrar feeds, CAS uploads or direct entry.</p>
       </div>
     </div>
   </div></section>

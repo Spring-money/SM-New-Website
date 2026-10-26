@@ -302,3 +302,17 @@ h4 { font-family: var(--sm-font-sans); font-weight: 600; }
 /* v1.3 (Omkar, 26 Oct): panel copy sits level with the top of its mock-up, not floating mid-height */
 .p3-row { align-items: start; }
 .p3-row > div:first-child { padding-top: clamp(8px, 2vw, 28px); }
+
+/* spec v2: Spring Sense chapters use capability icons, not numbers */
+.chapter .n.ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; border: 1px solid rgba(202,239,125,.45); }
+.chapter .n.ic svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.agent-btn i svg { stroke-width: 1.5; }
+
+/* spec v2: capability cards on /for-ria and /for-mfd */
+.caps-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.caps-grid .panel h3 { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+@media (max-width: 760px) { .caps-grid { grid-template-columns: 1fr; } }
+
+/* spec v2: feature tiles show live / coming soon counts under the name */
+.fteaser a { display: flex !important; flex-direction: column; align-items: flex-start; gap: 4px; }
+.fteaser a small { font: 500 12px/1.3 var(--sm-font-sans, Inter, sans-serif); color: var(--sm-text-secondary, #5A615F); }

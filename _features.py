@@ -9,7 +9,7 @@ Notes: vendor = switches on once the firm's own vendor account is connected; new
 R, P = "ready", "planned"
 
 GROUPS = [
- ("crm", "CRM and leads", "Every prospect and conversation, from the first call.", [
+ ("crm", "CRM and lead management", "Every prospect and conversation, from the first call.", [
   ("Lead capture", "Leads from your website, campaigns and referrals land in one list, with sync logs so none are lost.", R, ""),
   ("Pipeline", "Leads and opportunities move through stages your team can see at a glance.", R, ""),
   ("Calls, notes and meetings", "Call logs, notes and meetings kept with the lead or client they belong to.", R, ""),
@@ -32,7 +32,7 @@ GROUPS = [
   ("Welcome email", "Each new client gets a welcome email when onboarding starts.", R, ""),
   ("Video KYC", "Complete in-person verification over a recorded video call.", P, ""),
  ]),
- ("planning", "Data collection and planning", "Know the whole family before you plan or suggest anything.", [
+ ("planning", "Data collection and financial planning", "Know the whole family before you plan or suggest anything.", [
   ("Family and personal details", "Personal details, family, bank accounts, address and contact.", R, ""),
   ("Goals", "Record goals, plan for them and track progress, projected against actual.", R, ""),
   ("Net worth", "Assets, liabilities and insurance, from feeds, statements, the account aggregator or manual entry.", R, ""),
@@ -43,7 +43,7 @@ GROUPS = [
   ("Calculators", "Capital gains tax, child education, lumpsum and SIP, retirement, SIP target, SIP to SWP, step-up SIP and step-up SIP target. Results are illustrative.", R, ""),
   ("Expense trackers", "Everyday and retirement expense trackers for the client.", R, ""),
  ]),
- ("portfolio", "Portfolio and reporting", "One picture of what each family holds, for your team and for the client.", [
+ ("portfolio", "Portfolio and performance reporting", "One picture of what each family holds, for your team and for the client.", [
   ("Multi-asset portfolio", "Mutual funds, equities, PMS, AIFs and other assets, grouped for the family.", R, ""),
   ("Holdings and performance", "Folio-level holdings, allocation and performance, with XIRR.", R, ""),
   ("Plan-wise allocation", "See how a portfolio splits across plan types.", R, ""),
@@ -52,7 +52,7 @@ GROUPS = [
   ("Assets under advice", "A view of the assets your firm advises on.", R, ""),
   ("Reports and insights", "Reports your team can run, brand and share with clients.", R, ""),
  ]),
- ("transactions", "Transactions", "Orders through the exchanges and utilities your firm already uses.", [
+ ("transactions", "Multi-asset execution", "Orders through the exchanges and utilities your firm already uses.", [
   ("BSE StAR MF", "Purchases, SIPs and other systematic transactions, with BSE mandates.", R, ""),
   ("NSE", "Transactions, systematic transactions and mandates, plus UCC creation.", R, ""),
   ("MF Utilities", "Account opening, mandates, transactions and systematic transactions.", R, ""),
@@ -63,7 +63,7 @@ GROUPS = [
   ("Payment links and mandates", "Clients pay through payment links and mandates. The platform does not hold client money.", R, ""),
   ("Multi-client basket", "Place the same transaction for several clients in one go.", P, ""),
  ]),
- ("operations", "Operations and data", "The back office, on one list your whole team shares.", [
+ ("operations", "Back-office operations", "The back office, on one list your whole team shares.", [
   ("Task centre", "My tasks, client tasks and team tasks, in one place.", R, ""),
   ("Registrar feeds", "Daily CAMS and KFintech feeds bring holdings and transactions in.", R, ""),
   ("CAS import", "Read a client's consolidated account statement (CAS PDF) to bring holdings across.", R, ""),
@@ -71,7 +71,7 @@ GROUPS = [
   ("Exception queue", "Failed orders, reconciliation breaks and expiring mandates in one queue.", R, "new"),
   ("Master data", "Schemes, AMCs, team members and settings, maintained in one place.", R, ""),
  ]),
- ("engagement", "Client engagement", "Everything your client needs from you, in your brand.", [
+ ("engagement", "Client portal and engagement", "Everything your client needs from you, in your brand.", [
   ("Meeting centre", "Meetings and minutes of meeting, shared with the client.", R, ""),
   ("Advice centre", "Advice your adviser has written, kept with the client.", R, ""),
   ("Actions tab", "What the client needs to do next: tasks, meetings and, for advisory clients, advice.", R, ""),
@@ -89,14 +89,14 @@ GROUPS = [
   ("Fee engine and invoicing", "Advisory fees calculated, invoiced and tracked to collection.", R, ""),
   ("Sub-broker payouts", "Monthly payout reports for sub-brokers, with each sub-broker's share worked out.", P, ""),
  ]),
- ("compliance", "Compliance and administration", "Records that stand up, and access that fits each role.", [
+ ("compliance", "Compliance and admin", "Records that stand up, and access that fits each role.", [
   ("Role-based access", "Each person sees what their role needs, and nothing else.", R, ""),
   ("Warnings that stay on", "The identity block and the standard risk warning cannot be edited out of templates.", R, ""),
   ("Audit trail", "Who changed what, and when, across the firm.", P, ""),
   ("AML and PEP screening", "Screen clients against sanctions and politically exposed person lists.", P, ""),
   ("Regulatory reporting logs", "Logs of the reports your firm files, kept for inspection.", P, ""),
  ]),
- ("dashboard", "Practice dashboard", "The state of the whole book on one screen. Rolling out to firms now.", [
+ ("dashboard", "Practice intelligence dashboard", "The state of the whole book on one screen.", [
   ("Book at a glance", "Assets, client families, SIP book, net sales, flows and book composition.", R, "new"),
   ("Revenue and fee collection", "Revenue and, for advisory firms, fee collection.", R, "new"),
   ("At risk and concentration", "Families at risk, concentration and drift, so reviews start in the right place.", R, "new"),
@@ -105,7 +105,7 @@ GROUPS = [
   ("Shortcuts", "Add a client, place an order, renew mandates and export, from the dashboard.", R, "new"),
   ("Client home", "Net worth, goals, allocation, cover and loans, statements and next actions, in your client's view.", R, "new"),
  ]),
- ("sense", "Spring Sense", "Personalised AI agents. A person approves before anything reaches a client.", [
+ ("sense", "Spring Sense AI", "Personalised AI agents. A person approves before anything reaches a client.", [
   ("Meeting prep and notes", "A client brief before the meeting, and a summary with actions after it.", R, "ai"),
   ("Review drafts", "Drafts the review for your team to edit and approve.", R, "ai"),
   ("Client follow-ups", "Drafts reminders, SIP and birthday messages for approval.", R, "ai"),
@@ -115,7 +115,7 @@ GROUPS = [
 ]
 
 NOTE = {"vendor": "Needs your vendor account", "new": "Rolling out", "ai": "AI, approved by a person", "": ""}
-STATUS = {R: "Ready", P: "Planned"}
+STATUS = {R: "Live", P: "Coming soon"}
 
 def count(status=None):
     return sum(1 for g in GROUPS for f in g[3] if status is None or f[2] == status)
@@ -139,8 +139,8 @@ def directory():
     <label class="fsearch"><span class="sr">Search features</span><input type="search" placeholder="Search features, e.g. SIP, KYC, mandate" data-fq></label>
     <div class="ffilter" role="group" aria-label="Filter by status">
       <button class="fchip" type="button" data-fst="all" aria-pressed="true">All</button>
-      <button class="fchip" type="button" data-fst="ready" aria-pressed="false">Ready</button>
-      <button class="fchip" type="button" data-fst="planned" aria-pressed="false">Planned</button>
+      <button class="fchip" type="button" data-fst="ready" aria-pressed="false">Live</button>
+      <button class="fchip" type="button" data-fst="planned" aria-pressed="false">Coming soon</button>
     </div>
     <span class="fshown" role="status" data-fshown></span>
   </div>
@@ -148,5 +148,5 @@ def directory():
     <nav class="fdir-nav" aria-label="Feature groups">{nav}</nav>
     <div class="fdir-groups">{groups_html}<p class="fempty" data-fempty hidden>No features match. Try another word, or clear the filters.</p></div>
   </div>
-  <p class="fine">Planned features are on our roadmap and are not live. Nothing here is a launch date.</p>
+  <p class="fine">Coming soon features are in development and not live yet. Nothing here is a launch date.</p>
 </div>'''

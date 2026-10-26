@@ -19,11 +19,11 @@
     var scenes = $$(".scene", root);
     var title = $("[data-title]", root);
     var TITLES = [
-      "Meeting Prep & Summaries · Thursday 11:00",
-      "Portfolio Review Generator · Rao family",
-      "Automated Client Follow-ups · for approval",
-      "Ops & Compliance Verification · this morning",
-      "Spring Sense Assistant"
+      "Meeting prep and summaries · Thursday 11:00",
+      "Portfolio review generator · Rao family",
+      "Automated client follow-ups · for approval",
+      "Ops and compliance verification · this morning",
+      "Spring Sense assistant"
     ];
     var idx = 0, timer = null, playing = !reduce, visible = false, userStopped = false;
     var pp = $("button.pp", root.parentNode) || $("button.pp", root);

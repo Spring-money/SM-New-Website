@@ -27,17 +27,17 @@
   /* Demo firms. All names, domains and numbers are invented. */
   var FIRMS = [
     {
-      name: "Sahyadri Wealth", mark: "S", color: "#9A3412", tint: "#FDF0E8", url: "yourfirm.manthan.money",
+      name: "Demo Wealth", mark: "D", color: "#9A3412", tint: "#FDF0E8", url: "demowealth.manthan.money",
       who: "Wealth manager", nav: ["Clients", "Reviews", "Suggestions", "Orders", "Reconciliation", "Task centre"],
       on: 1, title: "Reviews this month", chip: "Review", bars: [72, 48, 85], kind: "Wealth manager", k1: "468.4", k2: "2.1", k3: "412", r1n: "Kulkarni family", r1s: "Review draft ready", r2n: "Rao family", r2s: "SIP mandate renewal", r3n: "Deshmukh family", r3s: "KYC refresh due", cn: "Hi Meera", cv: "18,42,500", cs: "Next SIP on 5 Nov", toast: "Spring Sense: review draft ready", toastSub: "Waiting for your approval"
     },
     {
-      name: "Kaveri Advisory", mark: "K", color: "#1D4ED8", tint: "#EEF4FF", url: "yourfirm.manthan.money",
+      name: "Demo Wealth", mark: "D", color: "#1D4ED8", tint: "#EEF4FF", url: "demowealth.manthan.money",
       who: "Wealth manager", nav: ["Clients", "Reviews", "Plans", "Orders", "Reconciliation", "Task centre"],
       on: 1, title: "Reviews this month", chip: "Review", bars: [58, 80, 40], kind: "Wealth manager", k1: "742.9", k2: "3.4", k3: "268", r1n: "Iyer family", r1s: "Review on Thursday", r2n: "Menon family", r2s: "Plan update due", r3n: "Shah family", r3s: "Annual review booked", cn: "Hi Arjun", cv: "62,10,300", cs: "Review on Thursday", toast: "Spring Sense: meeting brief ready", toastSub: "For Thursday, 11:00"
     },
     {
-      name: "Northbank Capital", mark: "N", color: "#6D28D9", tint: "#F3EEFF", url: "yourfirm.manthan.money",
+      name: "Demo Wealth", mark: "D", color: "#6D28D9", tint: "#F3EEFF", url: "demowealth.manthan.money",
       who: "Wealth manager", nav: ["Clients", "Families", "Reviews", "Orders", "Reconciliation", "Task centre"],
       on: 1, title: "Reviews this month", chip: "Review", bars: [64, 66, 70], kind: "Wealth manager", k1: "931.5", k2: "4.6", k3: "905", r1n: "Patil family", r1s: "Review draft ready", r2n: "Joshi family", r2s: "SIP mandate renewal", r3n: "Gupta family", r3s: "Documents missing", cn: "Hi Kabir", cv: "34,75,900", cs: "2 actions waiting", toast: "Spring Sense: 3 items flagged", toastSub: "KYC expiry and reconciliation"
     }

@@ -74,18 +74,19 @@ FOOT = f'''</main>
   <div class="wrap">
     <div style="margin-bottom:40px"><img src="assets/logo-reversed.svg" alt="Spring Money" width="150" height="25"><p style="margin-top:14px;max-width:30em">The technology partner for India's wealth advisors.</p></div>
     <div class="foot-grid">
-      <div><h4>Manthan</h4><ul><li><a href="manthan.html">Overview</a></li><li><a href="features.html">Features</a></li><li><a href="manthan.html#pricing">Pricing</a></li><li><a href="partners.html">Partners</a></li><li><a href="spring-sense.html">Spring Sense</a></li><li><a href="security.html">How we handle data</a></li></ul></div>
+      <div><h4>Manthan</h4><ul><li><a href="manthan.html">Overview</a></li><li><a href="features.html">Features</a></li><li><a href="manthan.html#pricing">Pricing</a></li><li><a href="partners.html">Partners</a></li><li><a href="security.html">How we handle data</a></li></ul></div>
       <div><h4>For wealth advisors</h4><ul><li><a href="for-ria.html">RIA</a></li><li><a href="for-mfd.html">MFD</a></li><li><span class="na">PMS</span>{soon()}</li><li><span class="na">RA</span>{soon()}</li><li><span class="na">AMCs</span>{soon()}</li></ul></div>
-      <div><h4>Resources</h4><ul><li><a href="calculators.html">Calculators</a></li><li><a href="faq.html">FAQ</a></li><li><a href="https://www.youtube.com/@springmoney" target="_blank" rel="noopener">YouTube<span class="sr"> (opens in a new tab)</span></a></li></ul></div>
-      <div><h4>About us</h4><ul><li><a href="about.html">About</a></li><li><a href="principles.html">Principles and practices</a></li><li><a href="team.html">Team</a></li><li><span class="na">Clients</span>{soon()}</li><li><a href="{GIT}">Contact</a></li></ul></div>
+      <div><h4>Resources</h4><ul><li><a href="calculators.html">Calculators</a></li><li><a href="https://www.youtube.com/@springmoney" target="_blank" rel="noopener">YouTube<span class="sr"> (opens in a new tab)</span></a></li></ul></div>
+      <div><h4>About us</h4><ul><li><a href="about.html">About</a></li><li><a href="principles.html">Principles and practices</a></li><li><a href="team.html">Team</a></li><li><a href="{GIT}">Contact</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="grievances.html">Grievances</a></li><li><a href="takedown.html">Takedown policy</a></li></ul></div>
       <div><h4>Connect</h4><ul><li><a href="{WA}" target="_blank" rel="noopener">WhatsApp<span class="sr"> (opens WhatsApp)</span></a></li><li><a href="{MAIL}">Email</a></li><li><a href="https://www.linkedin.com/company/springmoney/" target="_blank" rel="noopener">LinkedIn<span class="sr"> (opens in a new tab)</span></a></li><li><a href="https://www.youtube.com/@springmoney" target="_blank" rel="noopener">YouTube<span class="sr"> (opens in a new tab)</span></a></li><li><a href="https://www.instagram.com/springmoneyapp/" target="_blank" rel="noopener">Instagram<span class="sr"> (opens in a new tab)</span></a></li></ul></div>
     </div>
     <div class="foot-company">
       <div><p><b style="color:var(--sm-paper)">2AN Technologies Private Limited</b></p>
         <address>5th Floor, MIT TBI, Kashyap Building, MIT WPU Campus, Rambaug Colony, Kothrud, Pune, Maharashtra 411038</address></div>
-      <div><p><a href="mailto:sayhi@spring.money">sayhi@spring.money</a></p><p><a href="{WA}" target="_blank" rel="noopener">WhatsApp +91 86684 84607</a></p></div>
-      <p style="grid-column:1/-1;margin-top:8px">&copy; <span data-year>2026</span> 2AN Technologies Private Limited. Spring Money is a technology provider. It does not give investment advice or manage money.</p>
+      <div><p><a href="mailto:sayhi@spring.money">sayhi@spring.money</a></p></div>
+      <p class="foot-disc" style="grid-column:1/-1;margin-top:8px;max-width:62em">Spring Money (2AN Technologies Private Limited) builds software. It does not give investment advice, distribute financial products, manage money or hold client funds. Each firm on Manthan advises or distributes under its own SEBI or AMFI registration. Manthan and Spring Sense are products of 2AN Technologies Private Limited. Partner logos belong to their owners.</p>
+      <p style="grid-column:1/-1;margin-top:4px">&copy; <span data-year>2026</span> 2AN Technologies Private Limited</p>
     </div>
   </div>
 </footer>
@@ -96,13 +97,22 @@ FOOT = f'''</main>
 </html>
 '''
 
+# Pre-footer banner (copy spec v2): the same on every page except /get-in-touch
+BANNER = f'''  <section class="cta"><div class="wrap">
+    <div class="cta-box"><h2>See Manthan in your brand.</h2><div class="hero-actions"><a class="btn btn-primary" href="{GIT}">Get in touch</a></div></div>
+    <div class="doors">
+      <a class="door" href="manthan.html"><h3>Explore Manthan</h3><p>The platform your practice runs on, and the white-labelled app your clients use. Pricing included.</p><span class="go">See Manthan</span></a>
+      <a class="door dark" href="spring-sense.html"><h3>Discover Spring Sense AI</h3><p>Specialised AI capabilities that draft briefs, run compliance checks and prepare the day's back-office work.</p><span class="go">See Spring Sense</span></a>
+    </div></div></section>
+'''
+
 def page(name, title, desc, body, robots=""):
     with open(os.path.join(ROOT, name), "w") as f:
-        f.write(head(title, desc, robots) + body + FOOT)
+        f.write(head(title, desc, robots) + body + ("" if name == "get-in-touch.html" else BANNER) + FOOT)
 
-def cta(h="See Manthan in your own firm's brand.", extra=""):
-    return f'''  <section class="cta"><div class="wrap"><div class="cta-box"><h2>{h}</h2><div class="hero-actions"><a class="btn btn-primary" href="{GIT}">Get in touch</a>{extra}</div></div></div></section>
-'''
+def cta(h=None, extra=""):
+    """Kept for old call sites; the shared banner is added by page()."""
+    return ""
 
 def faq(items):
     return '<div class="faq">' + "".join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q, a in items) + '</div>'
